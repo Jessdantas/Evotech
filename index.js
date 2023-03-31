@@ -32,17 +32,19 @@ app.get('/login', (req, res) => {
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '',
-    database: 'evotech'
+    password: 'Xoxo7378',
+    database: 'evotech',
+    port: 3306
 });
 
 connection.connect((err) => {
     if (err) {
         console.log(err);
-    } else {
+    } 
+    else {
         console.log('Connected to database');
     }
     app.listen(port , () => {
-  console.log(`Server is running on port ${port}`);
+        console.log(`Server is running on port ${port}`);
     }); 
 });

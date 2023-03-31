@@ -3,7 +3,10 @@
 <nav class="navbar navbar-expand-lg py-3 sticky-top navbar-light bg-white">                                                                         
   <div class="container">
       <a class="navbar-brand" href="#">
-          <img class="logo" src="/MicrosoftTeams-image.png" alt="logo" height="50px" width="50px">
+        <svg width="150" height="50" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+            <text x="50" y="70" font-size="50" font-weight="bold" fill="#0D6AB3">Evo</text>
+            <text x="125" y="70" font-size="50" font-weight="bold" fill="#000000">Tech</text>
+        </svg>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,28 +15,27 @@
       <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                  <a class="nav-link" href="#home" id="toHome" >Home</a>
+                  <a class="nav-link" href="/#home" id="toHome" >Home</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#services">Serviços</a>
+                  <a class="nav-link" href="/#services">Serviços</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#features">Caracteristicas</a>
+                  <a class="nav-link" href="/#features">Caracteristicas</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#portfolio">Portifolios</a>
+                  <a class="nav-link" href="/#portfolio">Portifolios</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#pricing">Preços</a>
+                  <a class="nav-link" href="/#pricing">Preços</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#team">Time</a>
+                  <a class="nav-link" href="/#team">Time</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#contact">Contato</a>
+                  <a class="nav-link" href="/#contact">Contato</a>
               </li>
           </ul>
-          <button class="btn btn-primary ms-lg-3"  id="loginButton" >Junte-se conosco</button>
       </div>
   </div>
 </nav>
@@ -41,23 +43,52 @@
 <div class="hero vh-100 d-flex align-items-center bg-dark " id="home">
   <div class="container bg-dark">
       <div class="row">
-          <div class="col-lg-7 mx-auto text-center">
-              <h1 class="display-4 text-white">"Transforme seu Negócio com Soluções de TI de Ponta - Experimente a Inovação Sem Limites Hoje!"</h1>
-              <p class="text-white my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quia
-                  sequi eius. Quas, totam aliquid. Repudiandae reiciendis vel excepturi ipsa voluptate dicta!</p>
-              <a href="#" class="btn me-2 btn-primary">Comece Agora</a>
-              <a href="#" class="btn btn-outline-light">Nosso portifolio</a>
-          </div>
+            <div class="mb-3 text-center text-light">
+                <h2>Create an Account or <br> Login using the button below</h2>
+                <input class="btn btn-primary mt-2" type="button" value="Login" onclick="loginForm()">
+  
+            </div>
+        <form class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+                <div class="invalid-feedback">
+                    Please enter a name.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+                <div class="invalid-feedback">
+                    Please enter a valid email address.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+                <div class="invalid-feedback">
+                    Please enter a password.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="confirm_password" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+                <div class="invalid-feedback">
+                    Please confirm your password.
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
       </div>
   </div>
 </div>
 
-<footer class="bg-dark">
+<footer class="bg-dark text-light">
   <div class="footer-top bg-dark">
       <div class="container">
           <div class="row gy-4">
               <div class="col-lg-4">
-                  <img class="logo" src="MicrosoftTeams-image.png" alt="logo" height="250px">
+                <img src="/images/MicrosoftTeams-image.png" alt="" width="200px" height="200px">
               </div>
               <div class="col-lg-2">
                   <h5 class="text-white">Nossa Marca</h5>
@@ -106,3 +137,7 @@
       </div>
   </div>
 </footer>
+
+<script>
+
+</script>

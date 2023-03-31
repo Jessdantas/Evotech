@@ -3,7 +3,10 @@
 <nav class="navbar navbar-expand-lg py-3 sticky-top navbar-light bg-white">                                                                         
   <div class="container">
       <a class="navbar-brand" href="#">
-          <img class="logo" src="/MicrosoftTeams-image.png" alt="logo" height="50px" width="50px">
+        <svg width="150" height="50" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+            <text x="50" y="70" font-size="50" font-weight="bold" fill="#0D6AB3">Evo</text>
+            <text x="125" y="70" font-size="50" font-weight="bold" fill="#000000">Tech</text>
+        </svg>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +36,7 @@
                   <a class="nav-link" href="#contact">Contato</a>
               </li>
           </ul>
-          <button class="btn btn-primary ms-lg-3"  id="loginButton" >Junte-se conosco</button>
+          <button class="btn btn-primary ms-lg-3"  id="loginButton" onclick="toLogin()" >Junte-se conosco</button>
       </div>
   </div>
 </nav>
@@ -59,13 +62,13 @@
 
 <!-- Serviços -->
 
-<section id="services" class="bg-dark">
-  <div class="container bg-dark ">
+<section id="services" class="bg-dark text-light">
+  <div class="container bg-dark">
       <div class="row mb-5">
           <div class="col-md-8 mx-auto text-center">
-              <h6 class="text-primary">SERVIÇOS</h6>
-              <h1>Our Services</h1>
-              <p>Lorem ipsum dolor sit amet consectetur nisi necessitatibus repellat distinctio eveniet eaque fuga
+              <h6 > SERVIÇOS</h6>
+              <h1 >Our Services</h1>
+              <p >Lorem ipsum dolor sit amet consectetur nisi necessitatibus repellat distinctio eveniet eaque fuga
                   in cumque optio consectetur harum vitae debitis sapiente praesentium aperiam aut</p>
           </div>
       </div>
@@ -137,7 +140,7 @@
 <!-- End Serviços -->
 
 <!-- Escolher -->
-<section class="row py-0 bg-dark" id="features">
+<section class="row py-0 bg-dark text-light" id="features">
   <div class="col-lg-6 col-img"></div>
   <div class="col-lg-6 py-5">
       <div class="container">
@@ -182,8 +185,9 @@
       </div>
   </div>
 </section>
+
 <!-- Final Escolher -->
-<section id="portfolio" class="bg-dark">
+<section id="portfolio" class="bg-dark text-light">
   <div class="container">
       <div class="row mb-5">
           <div class="col-md-8 mx-auto text-center">
@@ -264,7 +268,7 @@
   </div>
 </section>
 
-<section id="pricing" class="bg-dark">
+<section id="pricing" class="bg-dark text-light">
   <div class="container">
       <div class="row mb-5">
           <div class="col-md-8 mx-auto text-center">
@@ -355,7 +359,7 @@
   </div>
 </section>
 
-<section id="team" class="bg-dark">
+<section id="team" class="bg-dark text-light">
   <div class="container">
       <div class="row mb-5">
           <div class="col-md-8 mx-auto text-center">
@@ -418,7 +422,7 @@
   </div>
 </section>
 
-<section id="contact" class="bg-dark">
+<section id="contact" class="bg-dark text-light">
   <div class="container">
       <div class="row mb-5">
           <div class="col-md-8 mx-auto text-center">
@@ -451,12 +455,12 @@
   </div>
 </section>
 
-<footer class="bg-dark">
+<footer class="bg-dark text-light">
   <div class="footer-top bg-dark">
       <div class="container">
           <div class="row gy-4">
               <div class="col-lg-4">
-                  <img class="logo" src="MicrosoftTeams-image.png" alt="logo" height="250px">
+                <img src="/images/MicrosoftTeams-image.png" alt="" width="200px" height="200px">
               </div>
               <div class="col-lg-2">
                   <h5 class="text-white">Nossa Marca</h5>
@@ -506,11 +510,12 @@
   </div>
 </footer>
 
-<script>
+<script>    
     const loginButton = document.querySelector('#loginButton');
-    
+    loginButton.addEventListener('click', () => {
+    window.location.href = '/login';
+});
 
 </script>
-
 
     
