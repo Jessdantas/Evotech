@@ -1,6 +1,6 @@
 # Site de Aluguel de Carros
 
-Este é um site de aluguel de carros que permite aos usuários alugar carros online. O site é construído usando HTML, CSS e JavaScript.
+Este é um site de aluguel de carros que permite aos usuários alugar carros online. O site é construído usando HTML, CSS, JavaScript e demais frameworks/modulos derivados dessa lingugagem como o bootstrap, node, express, express-handlebars etc. Neste exemplo que criei estou utilizando o MySQL.
 
 ## Sumário
 
@@ -14,10 +14,10 @@ Este é um site de aluguel de carros que permite aos usuários alugar carros onl
 
 O site tem os seguintes recursos:
 
-- Os usuários podem navegar pelos carros disponíveis
-- Os usuários podem fazer reservas para um carro específico
-- Os usuários podem ver os detalhes de suas reservas
-- Os usuários podem cancelar sua reserva
+- O sysmanager podem navegar pelos carros disponíveis
+- Os sysmanager podem fazer reservas para um carro específico
+- Os sysmanager podem ver os detalhes de suas reservas
+- Os sysmanager  podem cancelar sua reserva
 
 ## Instalação
 
