@@ -43,38 +43,23 @@
 <div class="hero vh-100 d-flex align-items-center bg-dark " id="home">
   <div class="container bg-dark">
       <div class="row">
-            <div class="mb-3 text-center text-light">
-                <h2>Create an Account or <br> Login using the button below</h2>
-                <input class="btn btn-primary mt-2" type="button" value="Login" onclick="loginForm()">
-  
+            <div class="mb-5 text-center text-light">
+                <h2> <i class="fa fa-bold" aria-hidden="true">Bem-vindo de volta - Faça login na sua conta</i></h2>
+                <p>Don't have an account? <a href="/signup">Click here</a></p>  
             </div>
-        <form class="needs-validation" novalidate>
+        <form class="needs-validation" novalidate onsubmit="return validateForm()" action="/login">
             <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-                <div class="invalid-feedback">
-                    Please enter a name.
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-                <div class="invalid-feedback">
+                <label for="email" class="form-label text-light">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Ex: evotech@gmail.com" required>
+                <div class="invalid-feedback" >
                     Please enter a valid email address.
                 </div>
             </div>
             <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password" required>
+                <label for="password" class="form-label text-light">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password must be at least 8 characters long." required>
                 <div class="invalid-feedback">
                     Please enter a password.
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="confirm_password" class="form-label">Confirm Password</label>
-                <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
-                <div class="invalid-feedback">
-                    Please confirm your password.
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -139,5 +124,39 @@
 </footer>
 
 <script>
+    
 
+    function validateForm() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirm_password").value;
+
+        // Check if name is not empty
+        if (name === "") {
+            alert("Please enter your name.");
+            return false;
+        }
+
+        // Check if email is valid
+        const emailRegex = /^\S+@\S+\.\S+$/;
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+
+        // Check if password is at least 8 characters long
+        if (password.length < 8) {
+            alert("Password must be at least 8 characters long.");
+            return false;
+        }
+
+        // Check if password and confirm password match
+        if (password !== confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+
+        return true;
+    }
 </script>

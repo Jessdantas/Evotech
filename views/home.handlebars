@@ -36,7 +36,7 @@
                   <a class="nav-link" href="#contact">Contato</a>
               </li>
           </ul>
-          <button class="btn btn-primary ms-lg-3"  id="loginButton" onclick="toLogin()" >Junte-se conosco</button>
+          <button class="btn btn-primary ms-lg-3"  id="signButton" onclick="toSignup()" >Junte-se conosco</button>
       </div>
   </div>
 </nav>
@@ -511,9 +511,9 @@
 </footer>
 
 <script>    
-    const loginButton = document.querySelector('#loginButton');
+    const loginButton = document.querySelector('#signButton');
     loginButton.addEventListener('click', () => {
-    window.location.href = '/login';
+    window.location.href = '/signup';
 });
 
 </script>

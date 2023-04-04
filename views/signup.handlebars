@@ -1,0 +1,176 @@
+<body  data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+<!-- NAVBAR TOP -->
+<nav class="navbar navbar-expand-lg py-3 sticky-top navbar-light bg-white">                                                                         
+  <div class="container">
+      <a class="navbar-brand" href="#">
+        <svg width="150" height="50" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+            <text x="50" y="70" font-size="50" font-weight="bold" fill="#0D6AB3">Evo</text>
+            <text x="125" y="70" font-size="50" font-weight="bold" fill="#000000">Tech</text>
+        </svg>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="/#home" id="toHome" >Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/#services">Serviços</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/#features">Caracteristicas</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/#portfolio">Portifolios</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/#pricing">Preços</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/#team">Time</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/#contact">Contato</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+<div class="hero vh-100 d-flex align-items-center bg-dark " id="home">
+  <div class="container bg-dark">
+      <div class="row">
+            <div class="mb-3 text-center text-light">
+                <h2>Comece a explorar nossos serviços se registrando </h2>
+                <p>ja tem uma conta? <a href="/login">clique aqui</a></p>
+            </div>
+        <form class="needs-validation" novalidate onsubmit="return validateForm()" action="/signup" method="POST">
+            <div class="mb-3">
+                <label for="name" class="form-label text-light">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Ex: evolution Tech" required>
+                <div class="invalid-feedback">
+                    Please enter a name.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label text-light">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Ex: evotech@gmail.com" required>
+                <div class="invalid-feedback" >
+                    Please enter a valid email address.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label text-light">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password must be at least 8 characters long." required>
+                <div class="invalid-feedback">
+                    Please enter a password.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="confirm_password" class="form-label text-light">Confirm Password</label>
+                <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
+                <div class="invalid-feedback">
+                    Please confirm your password.
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-light">
+  <div class="footer-top bg-dark">
+      <div class="container">
+          <div class="row gy-4">
+              <div class="col-lg-4">
+                <img src="/images/MicrosoftTeams-image.png" alt="" width="200px" height="200px">
+              </div>
+              <div class="col-lg-2">
+                  <h5 class="text-white">Nossa Marca</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="#">Sobre</a></li>
+                      <li><a href="#">Serviços</a></li>
+                      <li><a href="#">Caracteristicas</a></li>
+                      <li><a href="#">Preços</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-2">
+                  <h5 class="text-white">Saiba Mais</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="#">FAQ's</a></li>
+                      <li><a href="#">Privacidade</a></li>
+                      <li><a href="#">Garantia</a></li>
+                      <li><a href="#">Entrega</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-4">
+                  <h5 class="text-white">Contact</h5>
+                  <ul class="list-unstyled">
+                      <li>Endereço: SENAC coisa boa</li>
+                      <li>Email: Robson.graham@senac.com</li>
+                      <li>Telefone: (11) 96666-6666</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="footer-bottom py-3">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6">
+                  <p class="mb-0">© 2023 copyright all right reserved | Designed by<i
+                      class="bx bx-heart text-danger"> E.G.T</i>
+              </div>
+              <div class="col-md-6">
+                  <div class="social-icons">
+                      <a href="#"><i class='bx bxl-facebook'></i></a>
+                      <a href="#"><i class='bx bxl-twitter'></i></a>
+                      <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+<script>
+    
+
+    function validateForm() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirm_password").value;
+
+        // Check if name is not empty
+        if (name === "") {
+            alert("Please enter your name.");
+            return false;
+        }
+
+        // Check if email is valid
+        const emailRegex = /^\S+@\S+\.\S+$/;
+        if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+
+        // Check if password is at least 8 characters long
+        if (password.length < 8) {
+            alert("Password must be at least 8 characters long.");
+            return false;
+        }
+
+        // Check if password and confirm password match
+        if (password !== confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+
+        return true;
+    }
+</script>
